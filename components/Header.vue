@@ -29,7 +29,6 @@ export default {
 
 <style lang="scss" scoped>
 header{
-  border:1px solid red;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

@@ -8,8 +8,10 @@
           <input type="text" id="input" name="" value="" placeholder="E-mail">
           <button type="submit" id="submit" >Отправить</button>
       </form>
-      <div class="rotate">
-        <marquee behavior="scroll" direction="left">human resources • sales & retail management • creative & design • marketing & communication • digital & media • beauty & cosmetics • supply chain & production</marquee>
+      <div class="marquee">
+        <div class="track">
+          <div class="content">human resources • sales & retail management • creative & design • marketing & communication • digital & media • beauty & cosmetics • supply chain & production & human resources • sales & retail management • creative & design • marketing & communication • digital & media • beauty & cosmetics • supply chain & production & design • marketing & communication • digital & media • beauty & cosmetics & retail management • creative & design • marketing & communication</div>
+        </div>
       </div>
     </div>
     <div class="photo">
@@ -25,16 +27,14 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .container{
-  border:1px solid blue;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 
   padding: 0px 222px 0px 166px;
   .text{
-    border:1px solid green;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,7 +67,6 @@ export default {
       margin-bottom: 16px;
     }
     form{
-      border:1px solid black;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -101,22 +100,39 @@ export default {
     }
   }
   .photo{
-    border:1px solid pink;
   }
-  .rotate{
-    marquee{
-      position: fixed;
-      left:25%;
-      top:50%;
-      font-family: Bebas Neue;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 48px;
-      line-height: 48px;
-      color: #000000;
-      transform: rotate(-45deg);
+  .marquee{
+    position: fixed;
+    left:25%;
+    top:50%;
+    transform: rotate(-45deg);
+    width: 100vw;
+    max-width: 100%;
+
+    .track {
       background: #FFD302;
-      width:100%;
+      position: absolute;
+      white-space: nowrap;
+      will-change: transform;
+      animation: marquee 32s linear infinite;
+      div{
+        font-family: Bebas Neue;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 48px;
+        /* identical to box height */
+
+
+        color: #000000;
+      }
+
+    }
+
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
     }
   }
 }
