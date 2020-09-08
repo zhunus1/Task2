@@ -125,6 +125,7 @@ export default {
       line-height: 31px;
       color: #000000;
       margin-bottom: 16px;
+      text-align: center;
     }
     form{
       display: flex;
