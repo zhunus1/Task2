@@ -16,6 +16,12 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
+  css: [
+  'bootstrap/dist/css/bootstrap.css',
+  ],
+  plugins: [
+      { src: '@/plugins/bootstrap.js', ssr: false },
+    ],
   loading: { color: '#3B8070' },
   /*
   ** Build configuration
@@ -34,6 +40,6 @@ module.exports = {
         })
       }
     }
+
   }
 }
-

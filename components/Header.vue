@@ -17,7 +17,13 @@
     </div>
     <div class="lang">
       <a href="#" id="ru">Ру</a>
-      <a href="#">En</a>
+      <a href="#" id="en">En</a>
+      <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">RU</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+          </div>
+        </div>
     </div>
   </header>
 </template>
@@ -32,8 +38,12 @@ header{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   padding:60px 166px 50px 166px;
   .lang{
+    .dropdown{
+      display: none;
+    }
     a{
       font-family: Futura PT;
       font-style: normal;
@@ -42,10 +52,47 @@ header{
       line-height: 23px;
       text-align: right;
       color: #A0A0A0;
+      text-decoration: none;
     }
     #ru{
       margin-right: 30px;
     }
   }
 }
+
+@media only screen and (min-width: 481px) and (max-width:768px) {
+  header{
+    padding:30px 83px 25px 83px;
+  }
+}
+
+/* For smartphones: */
+@media only screen and (min-width: 320px) and (max-width:480px) {
+  header{
+    padding: 12px 17px;
+    .lang{
+      #ru,#en{
+        display: none;
+      }
+      .dropdown{
+        display: block;
+        #navbarDropdown{
+          font-family: Futura PT;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 21px;
+          text-align: right;
+          color: #000000;
+        }
+        #navbarDropdown::after{
+          content:url('~@/static/after.svg');
+          border:0px;
+          margin-left: 6px;
+        }
+      }
+    }
+  }
+}
+
 </style>
