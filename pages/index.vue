@@ -289,7 +289,9 @@ to { transform: translateX(-50%); }
 /* For smartphones: */
 @media only screen and (min-width: 320px) and (max-width:480px) {
   .kontainer{
-
+    #after p{
+      text-align: center;
+    }
     padding: 0px 12px 30px 12px;
     margin-top: 45px;
     flex-direction: column;
