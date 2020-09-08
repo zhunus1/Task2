@@ -26,6 +26,14 @@ module.exports = {
   /*
   ** Build configuration
   */
+  modules: [
+    '@nuxtjs/axios',
+  ],    
+
+  axios: {
+    baseURL: 'http://localhost:8000/api/v1',
+  },
+
   build: {
     /*
     ** Run ESLint on save
