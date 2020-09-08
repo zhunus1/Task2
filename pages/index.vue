@@ -198,6 +198,7 @@ export default {
           font-size: 48px;
           line-height: 48px;
           color: #000000;
+          margin-bottom: 0px;
         }
       }
 
