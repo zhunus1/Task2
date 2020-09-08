@@ -10,7 +10,7 @@
       </form>
       <div class="marquee">
         <div class="track">
-          <div class="content">human resources • sales & retail management • creative & design • marketing & communication • digital & media • beauty & cosmetics • supply chain & production & human resources • sales & retail management • creative & design • marketing & communication • digital & media • beauty & cosmetics • supply chain & production & design • marketing & communication • digital & media • beauty & cosmetics & retail management • creative & design • marketing & communication</div>
+          <div class="content"><p id="first">human resources • sales & retail management • creative & design • marketing & communication • digital</p><p id="second"> & media • beauty & cosmetics • supply chain & production & human resources • sales & retail management • creative & design • marketing & communication</p></div>
         </div>
       </div>
       <div v-show="visible" class="after">
@@ -147,16 +147,17 @@ export default {
       white-space: nowrap;
       will-change: transform;
       animation: marquee 32s linear infinite;
-      div{
-        font-family: Bebas Neue;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 48px;
-        line-height: 48px;
-        /* identical to box height */
-
-
-        color: #000000;
+      div {
+        display: flex;
+        flex-direction: row;
+        p{
+          font-family: Bebas Neue;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 48px;
+          line-height: 48px;
+          color: #000000;
+        }
       }
 
     }
@@ -171,24 +172,74 @@ export default {
 
 
 /* For Tablets: */
-@media only screen and (min-width: 481px) and (max-width:768px) {
+@media only screen and (min-width: 481px) and (max-width:968px) {
   .container{
-    border:1px solid green;
     padding: 0px 111px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     .photo{
       order:1;
+      img{
+        width:259px;
+        height:422px;
+      }
     }
     .text{
+      justify-content: center;
+      align-items: center;
+      #soon{
+        font-size: 44px;
+        line-height: 62px;
+        margin-bottom: 17px;
+      }
+      .after{
+        p{
+          text-align: center;
+          font-size: 18px;
+          line-height: 23px;
+        }
+      }
+      #description{
+        font-size: 20px;
+        line-height: 23px;
+        margin-bottom: 38px;
+        text-align: center;
+      }
+      #notification{
+        font-size: 20px;
+        line-height: 31px;
+        margin-bottom: 16px;
+      }
+      form{
+        #input{
+          margin-right: 12px;
+          padding: 10px 150px 10px 15px;
+        }
+        #input::placeholder{
+          font-size: 14px;
+          line-height: 23px;
+        }
+        #submit{
+          font-size: 14px;
+          line-height: 23px;
+          padding: 6px 46px;
+        }
+      }
       order:2;
+      .marquee{
+        top:15%;
+        transform: rotate(-35deg);
+        .content p{
+          font-size: 34px;
+          line-height: 34px
+        }
+      }
     }
-    .marquee{
-      position: fixed;
-      left:-65%;
-      top:90%;
-    }
+  }
+  @keyframes marquee {
+    from { transform: translateX(-20%); }
+to { transform: translateX(-50%); }
   }
 }
 

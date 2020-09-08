@@ -42,10 +42,23 @@ header{
       line-height: 23px;
       text-align: right;
       color: #A0A0A0;
+      text-decoration: none;
     }
     #ru{
       margin-right: 30px;
     }
   }
 }
+
+@media only screen and (min-width: 481px) and (max-width:768px) {
+  header{
+    padding:30px 83px 25px 83px;
+  }
+}
+
+/* For smartphones: */
+@media only screen and (min-width: 320px) and (max-width:480px) {
+
+}
+
 </style>
