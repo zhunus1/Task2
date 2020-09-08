@@ -1,13 +1,17 @@
 <template>
   <div class="kontainer">
     <div class="text">
-      <p id="soon">Скоро запускаем!</p>
-      <p id="description">Fashionhub.kz - первая в Казахстане сеть для творчества и поиска работы в<br/> Интернете, посвященная исключительно моде, розничной торговле, красоте,<br/> косметике, цифровым технологиям и медиа.</p>
-      <p id="second">Первая платформа для поиска работы и стажировок в сфере моды и продаж в Казахстане.</p>
-      <p id="notification">Получите уведомление, когда мы запустим</p>
+      <p id="soon" v-show="$store.state.lang">Скоро запускаем!🚀</p>
+      <p id="soon" v-show="!$store.state.lang">We are launching soon! 🚀</p>
+      <p id="description" v-show="$store.state.lang">Fashionhub.kz - первая в Казахстане сеть для творчества и поиска работы в<br/> Интернете, посвященная исключительно моде, розничной торговле, красоте,<br/> косметике, цифровым технологиям и медиа.</p>
+      <p id="description" v-show="!$store.state.lang">Fashionhub.kz is the very first online creative and job search network in<br/> Kazakhstan, solely dedicated for fashion, retail, beauty, cosmetics,<br/> digital and media.</p>
+      <p id="secont">Первая платформа для поиска работы и стажировок в сфере моды и продаж в Казахстане.</p>
+      <p id="notification" v-show="$store.state.lang">Получите уведомление, когда мы запустим</p>
+      <p id="notification" v-show="!$store.state.lang">Get notified when we launch</p>
       <form method="post" v-show="!visible" onsubmit="showHide()">
           <input type="text" id="input" name="" value="" placeholder="E-mail">
-          <button type="submit" id="submit">Отправить</button>
+          <button type="submit" id="submit" v-show="$store.state.lang">Отправить</button>
+          <button type="submit" id="submit" v-show="!$store.state.lang">Notify me</button>
       </form>
       <div class="marquee">
         <div class="track">
@@ -15,7 +19,8 @@
         </div>
       </div>
       <div v-show="visible" class="after">
-        <p>Спасибо за ваш интерес. Мы обязательно вас оповестим!</p>
+        <p v-show="$store.state.lang">Спасибо за ваш интерес. Мы обязательно вас оповестим!</p>
+        <p v-show="!$store.state.lang">Thank you for your interest. We will definitely notify you!</p>
       </div>
       <div class="social">
         <a href="#">
@@ -78,6 +83,9 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    #secont{
+      display: none;
+    }
     .social{
       display: none;
     }
@@ -318,7 +326,7 @@ to { transform: translateX(-50%); }
       #description{
         display: none;
       }
-      #second{
+      #secont{
         display: block;
         font-size: 12px;
         line-height: 15px;

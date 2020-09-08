@@ -16,12 +16,13 @@
       </svg>
     </div>
     <div class="lang">
-      <a href="#" id="ru">Ру</a>
-      <a href="#" id="en">En</a>
+      <button id="ru" @click="$store.commit('changeTrue');changeLanguage('RU');">Ру</button>
+      <button id="en" @click="$store.commit('changeFalse');changeLanguage('EN');">En</button>
       <div class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">RU</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">EN</a>
+            <a v-show="this.current!='EN'" class="dropdown-item" href="#" v-on:click="$store.commit('changeFalse');changeLanguage('EN');">EN</a>
+            <a v-show="this.current!='RU'" class="dropdown-item" href="#" v-on:click="$store.commit('changeTrue');changeLanguage('RU');">RU</a>
           </div>
         </div>
     </div>
@@ -30,6 +31,25 @@
 
 <script>
 export default {
+  data() {
+   return {
+     current : "RU",
+   };
+ },
+  methods : {
+    changeLanguage: function(language){
+      document.getElementById("navbarDropdown").innerHTML=language;
+      if(language=="RU"){
+        this.current="RU";
+        document.getElementById('en').style.color='#A0A0A0';
+        document.getElementById('ru').style.color='#000000';
+      }else{
+        this.current="EN";
+        document.getElementById('ru').style.color='#A0A0A0';
+        document.getElementById('en').style.color='#000000';
+      }
+    }
+  },
 }
 </script>
 
@@ -56,6 +76,24 @@ header{
     }
     #ru{
       margin-right: 30px;
+      border:0px;
+      background: transparent;
+      font-family: Futura PT;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 23px;
+      color: #000000;
+    }
+    #en{
+      font-family: Futura PT;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 23px;
+      color: #000000;
+      background: transparent;
+      border:0px;
     }
   }
 }
