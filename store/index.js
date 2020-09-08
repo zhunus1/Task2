@@ -1,9 +1,21 @@
-export const state = () => ({
-  state : true
-})
+import Vue from 'vue'
+import Vuex from 'vuex'
 
-export const mutations = {
-  change(state) {
-    state = !state;
-  }
-}
+Vue.use(Vuex)
+
+const store = () =>
+  new Vuex.Store({
+    state: {
+      lang: true
+    },
+    mutations: {
+      changeFalse(state) {
+        state.lang = false
+      },
+      changeTrue(state) {
+        state.lang = true
+      }
+    }
+  })
+
+export default store
