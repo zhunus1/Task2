@@ -21,7 +21,7 @@
       <div class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">RU</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">EN</a>
           </div>
         </div>
     </div>
@@ -89,6 +89,17 @@ header{
           content:url('~@/static/after.svg');
           border:0px;
           margin-left: 6px;
+        }
+      }
+      .dropdown-menu{
+        border:0px;
+        padding: 0px;
+        min-width: inherit;
+        text-align: center;
+
+        a{
+          transform: translate3d(15px, 0px, 0px);
+          padding: 0px;
         }
       }
     }

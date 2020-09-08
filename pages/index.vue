@@ -100,9 +100,6 @@ export default {
         color: #000000;
       }
     }
-    #second{
-      display: none;
-    }
     #description{
       font-family: Futura PT;
       font-style: normal;
@@ -178,7 +175,7 @@ export default {
       position: absolute;
       white-space: nowrap;
       will-change: transform;
-      animation: marquee 32s linear infinite;
+      animation: marquee 30s linear infinite;
       div {
         display: flex;
         flex-direction: row;
@@ -232,6 +229,9 @@ export default {
           line-height: 23px;
         }
       }
+      #second{
+        display: none;
+      }
       #description{
         font-size: 20px;
         line-height: 23px;
@@ -270,7 +270,7 @@ export default {
     }
   }
   @keyframes marquee {
-    from { transform: translateX(-20%); }
+    from { transform: translateX(-25%); }
 to { transform: translateX(-50%); }
   }
 }
