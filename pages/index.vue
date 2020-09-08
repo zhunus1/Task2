@@ -4,8 +4,8 @@
       <p id="soon">Скоро запускаем!</p>
       <p id="description">Fashionhub.kz - первая в Казахстане сеть для творчества и поиска работы в<br/> Интернете, посвященная исключительно моде, розничной торговле, красоте,<br/> косметике, цифровым технологиям и медиа.</p>
       <p id="notification">Получите уведомление, когда мы запустим</p>
-      <form method="post" v-show="!visible" onsubmit="showHide()">
-          <input type="text" id="input" name="" value="" placeholder="E-mail">
+      <form @submit.prevent='sendEmail' v-show="!visible">
+          <input type="text" id="input" v-model="email" placeholder="E-mail">
           <button type="submit" id="submit">Отправить</button>
       </form>
       <div class="marquee">
@@ -30,10 +30,12 @@ export default {
   data() {
    return {
      visible : false,
+     email: '',
    };
  },
  methods : {
-   showHide : function () {
+   async sendEmail() {
+     await this.$axios.$post('/emails/', { email: this.email })
      this.visible = true;
    },
  }
