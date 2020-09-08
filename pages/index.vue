@@ -5,7 +5,8 @@
       <p id="soon" v-show="!$store.state.lang">We are launching soon! 🚀</p>
       <p id="description" v-show="$store.state.lang">Fashionhub.kz - первая в Казахстане сеть для творчества и поиска работы в<br/> Интернете, посвященная исключительно моде, розничной торговле, красоте,<br/> косметике, цифровым технологиям и медиа.</p>
       <p id="description" v-show="!$store.state.lang">Fashionhub.kz is the very first online creative and job search network in<br/> Kazakhstan, solely dedicated for fashion, retail, beauty, cosmetics,<br/> digital and media.</p>
-      <p id="secont">Первая платформа для поиска работы и стажировок в сфере моды и продаж в Казахстане.</p>
+      <p id="secont" v-show="$store.state.lang">Первая платформа для поиска работы и стажировок в сфере моды и продаж в Казахстане.</p>
+      <p id="secont" v-show="!$store.state.lang">The first platform for job search and internships in fashion and sales in Kazakhstan.</p>
       <p id="notification" v-show="$store.state.lang">Получите уведомление, когда мы запустим</p>
       <p id="notification" v-show="!$store.state.lang">Get notified when we launch</p>
       <form method="post" v-show="!visible" onsubmit="showHide()">
@@ -287,7 +288,7 @@ to { transform: translateX(-50%); }
 /* For smartphones: */
 @media only screen and (min-width: 320px) and (max-width:480px) {
   .kontainer{
-    #after p{
+    .after p{
       text-align: center;
     }
     padding: 0px 12px 30px 12px;
