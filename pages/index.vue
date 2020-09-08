@@ -278,6 +278,7 @@ to { transform: translateX(-50%); }
 /* For smartphones: */
 @media only screen and (min-width: 320px) and (max-width:480px) {
   .kontainer{
+
     padding: 0px 12px 30px 12px;
     margin-top: 45px;
     flex-direction: column;
@@ -340,13 +341,31 @@ to { transform: translateX(-50%); }
           margin: 0px;
           margin-bottom: 11px;
         }
+        #input::placeholder{
+          font-weight: 450;
+          font-size: 12px;
+          line-height: 15px;
+        }
         #submit{
           width: 100%;
           margin-bottom: 33px;
+          font-size: 12px;
+          line-height: 15px;
+          text-align: center;
         }
       }
       .marquee{
-        display: none;
+        display: flex;
+        position: absolute;
+        top:15%;
+        .track{
+          #first,#second{
+            margin: 0px;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 24px;
+          }
+        }
       }
     }
   }

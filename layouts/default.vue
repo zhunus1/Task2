@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main">
     <Header/>
     <nuxt/>
   </div>
@@ -57,5 +57,11 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+@media only screen and (min-width: 320px) and (max-width:480px) {
+.main{
+  position: relative;
+  overflow: hidden;
+}
 }
 </style>
