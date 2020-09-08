@@ -369,6 +369,10 @@ to { transform: translateX(-50%); }
       }
     }
   }
+  @keyframes marquee {
+    from { transform: translateX(-10%); }
+to { transform: translateX(-50%); }
+  }
 }
 
 </style>
