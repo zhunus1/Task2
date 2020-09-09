@@ -76,6 +76,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@font-face {
+  font-family: 'Futura PT Book';
+  src: url('~assets/fonts/FuturaPT-Book.eot');
+  src: url('~assets/fonts/FuturaPT-Book.eot?#iefix') format('embedded-opentype'),
+  url('~assets/fonts/FuturaPT-Book.woff') format('woff'),
+  url('~assets/fonts/FuturaPT-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+  @font-face {
+    font-family: 'Bebas Neue';
+    src: url('~assets/fonts/BebasNeue-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 .kontainer{
   display: flex;
   flex-direction: row;
@@ -89,11 +106,12 @@ export default {
     #secont{
       display: none;
     }
+
     .social{
       display: none;
     }
     #soon{
-      font-family: Futura PT;
+      font-family: 'Futura PT Book', sans-serif;
       font-style: normal;
       font-weight: 600;
       font-size: 64px;
@@ -103,7 +121,7 @@ export default {
     }
     .after{
       p{
-        font-family: Futura PT;
+        font-family:  'Futura PT Book', sans-serif;
         font-style: normal;
         font-weight: 450;
         font-size: 18px;
@@ -112,7 +130,7 @@ export default {
       }
     }
     #description{
-      font-family: Futura PT;
+      font-family:  'Futura PT Book', sans-serif;
       font-style: normal;
       font-weight: 450;
       font-size: 18px;
@@ -121,7 +139,7 @@ export default {
       margin-bottom: 38px;
     }
     #notification{
-      font-family: Futura PT;
+      font-family: 'Futura PT Book', sans-serif;
       font-style: normal;
       font-weight: 600;
       font-size: 24px;
@@ -141,9 +159,10 @@ export default {
         padding: 10px 150px 10px 15px;
         height: 100%;
         border:0px;
+        font-family: 'Futura PT' sans-serif;
       }
       #input::placeholder{
-        font-family: Futura PT;
+        font-family: 'Futura PT Book', sans-serif;
         font-style: normal;
         font-weight: 450;
         font-size: 18px;
@@ -151,9 +170,9 @@ export default {
         color: #595959;
       }
       #submit{
+        font-family: 'Futura PT' sans-serif;
         background: #FFD302;
         border-radius: 4px;
-        font-family: Futura PT;
         font-style: normal;
         font-weight: 600;
         font-size: 18px;
@@ -192,13 +211,14 @@ export default {
         display: flex;
         flex-direction: row;
         p{
-          font-family: Bebas Neue;
+          font-family: 'Bebas Neue';
           font-style: normal;
           font-weight: bold;
           font-size: 48px;
           line-height: 48px;
           color: #000000;
-          margin-bottom: 0px;
+          margin-bottom: 1px;
+          margin-top: 5px;
         }
       }
 
