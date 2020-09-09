@@ -54,15 +54,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 @font-face {
-  font-family: 'Futura PT Book';
-  src: url('~assets/fonts/FuturaPT-Book.eot');
-  src: url('~assets/fonts/FuturaPT-Book.eot?#iefix') format('embedded-opentype'),
-  url('~assets/fonts/FuturaPT-Book.woff') format('woff'),
-  url('~assets/fonts/FuturaPT-Book.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Futura PT';
+    src: url('~assets/fonts/FuturaPTCond-Bold.eot');
+    src: local('Futura PT Cond Bold'), local('FuturaPTCond-Bold'),
+        url('~assets/fonts/FuturaPTCond-Bold.eot?#iefix') format('embedded-opentype'),
+        url('~assets/fonts/FuturaPTCond-Bold.woff') format('woff'),
+        url('~assets/fonts/FuturaPTCond-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
 }
+
 
 header{
   display: flex;
