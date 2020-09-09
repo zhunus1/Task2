@@ -54,6 +54,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@font-face {
+  font-family: 'Futura PT Book';
+  src: url('~assets/fonts/FuturaPT-Book.eot');
+  src: url('~assets/fonts/FuturaPT-Book.eot?#iefix') format('embedded-opentype'),
+  url('~assets/fonts/FuturaPT-Book.woff') format('woff'),
+  url('~assets/fonts/FuturaPT-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 header{
   display: flex;
   flex-direction: row;
@@ -65,7 +75,7 @@ header{
       display: none;
     }
     a{
-      font-family: Futura PT;
+      font-family: 'Futura PT' sans-serif;
       font-style: normal;
       font-weight: 600;
       font-size: 18px;
@@ -78,7 +88,7 @@ header{
       margin-right: 30px;
       border:0px;
       background: transparent;
-      font-family: Futura PT;
+      font-family: 'Futura PT' sans-serif;
       font-style: normal;
       font-weight: 600;
       font-size: 18px;
@@ -86,7 +96,7 @@ header{
       color: #000000;
     }
     #en{
-      font-family: Futura PT;
+      font-family: 'Futura PT' sans-serif;
       font-style: normal;
       font-weight: 600;
       font-size: 18px;
@@ -115,7 +125,7 @@ header{
       .dropdown{
         display: block;
         #navbarDropdown{
-          font-family: Futura PT;
+          font-family:'Futura PT' sans-serif;
           font-style: normal;
           font-weight: 600;
           font-size: 16px;
