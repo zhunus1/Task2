@@ -1,7 +1,9 @@
 module.exports = {
   /*
   ** Headers of the page
+  
   */
+  mode: 'spa',
   head: {
     title: 'task2',
     meta: [

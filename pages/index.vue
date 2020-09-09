@@ -51,15 +51,24 @@
       </div>
     </div>
     <div class="photo">
-      <img src="~static/bust.png" alt="">
+      <kinesis-container class="image-container" >
+
+          <kinesis-element type="depth_inv" axis='x' parallaxStrength=50 tag="img" src="/bust.png" />
+
+      </kinesis-container>
     </div>
   </div>
 </template>
 
 <script>
 import AppLogo from '~/components/AppLogo.vue'
+import { KinesisContainer, KinesisElement } from 'vue-kinesis'
 
 export default {
+  components: {
+    'kinesis-container': KinesisContainer,
+    'kinesis-element': KinesisElement
+  },
   data() {
    return {
      visible : false,
@@ -194,6 +203,7 @@ export default {
   .photo{
   }
   .marquee{
+    z-index: 10;
     position: fixed;
     left:25%;
     top:50%;
@@ -293,6 +303,7 @@ export default {
       }
       order:2;
       .marquee{
+        z-index: 10;
         top:15%;
         transform: rotate(-35deg);
         .content p{
@@ -320,7 +331,7 @@ to { transform: translateX(-50%); }
     justify-content: center;
     align-items: center;
     .photo{
-      order:1;
+      order: 1;
       img{
         width:163px;
         height: 263px;
@@ -390,6 +401,7 @@ to { transform: translateX(-50%); }
         }
       }
       .marquee{
+        z-index: 10;
         display: flex;
         position: absolute;
         top:15%;
