@@ -57,16 +57,14 @@ export default {
 
 @font-face {
     font-family: 'Futura PT';
-    src: url('~assets/fonts/FuturaPTCond-Bold.eot');
-    src: local('Futura PT Cond Bold'), local('FuturaPTCond-Bold'),
-        url('~assets/fonts/FuturaPTCond-Bold.eot?#iefix') format('embedded-opentype'),
-        url('~assets/fonts/FuturaPTCond-Bold.woff') format('woff'),
-        url('~assets/fonts/FuturaPTCond-Bold.ttf') format('truetype');
-    font-weight: bold;
+    src: url('~assets/fonts/FuturaPT-ExtraBold.eot');
+    src: local('Futura PT Extra Bold'), local('FuturaPT-ExtraBold'),
+        url('~assets/fonts/FuturaPT-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('~assets/fonts/FuturaPT-ExtraBold.woff') format('woff'),
+        url('~assets/fonts/FuturaPT-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
     font-style: normal;
 }
-
-
 header{
   display: flex;
   flex-direction: row;
@@ -110,13 +108,11 @@ header{
     }
   }
 }
-
 @media only screen and (min-width: 481px) and (max-width:768px) {
   header{
     padding:30px 83px 25px 83px;
   }
 }
-
 /* For smartphones: */
 @media only screen and (min-width: 320px) and (max-width:480px) {
   header{
@@ -147,7 +143,6 @@ header{
         padding: 0px;
         min-width: inherit;
         text-align: center;
-
         a{
           transform: translate3d(15px, 0px, 0px);
           padding: 0px;
@@ -156,5 +151,4 @@ header{
     }
   }
 }
-
 </style>
